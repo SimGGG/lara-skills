@@ -49,3 +49,19 @@ Non-learned references are computed during training for the validation split: `p
 ## Metrics
 
 Evaluation reports, for grade thresholds >= 1 and >= 2 and every K in `ks`: macro recall and hit rate of known positives over queries that have at least one known positive, micro recall, how many of the top-K slots were judged at all, and how many judged-irrelevant skills were retrieved. Unjudged skills remain in the ranking and are not counted as errors. Within-pool NDCG@5, precision and pairwise accuracy over judged candidates are reported as secondary numbers.
+
+## Illustrations from the manuscript
+
+The three figures below walk through the stages on a toy graph (names, weights and shades are illustrative).
+
+**Labor-market graph, node features and the typed attention encoder.** Three postings become a heterogeneous graph with co-occurrence weights between skills, occupation-skill weights and taxonomy membership. The frozen encoder maps skill and occupation texts to vectors; a group vector is the normalized mean of its members. Each attention layer passes messages along the relations and updates the states of skills, occupations and groups.
+
+![Graph and node features](figures/graph_and_features.png)
+
+**Patent-conditioned node attention.** The description embedding passes through the content-preserving adapter (bounded change, identity at initialization) and a projection. For each node type, a text term compares the adapted query with the node text vectors and a bounded graph term compares projected states; one softmax per node type gives the attention.
+
+![Node attention](figures/node_attention.png)
+
+**Relation routes, fusion and bounded correction.** Attention mass reaches skills through the skill, occupation and taxonomy routes; the occupation route distributes an occupation's mass to its skills with description-specific shares over the same fixed links. The gate mixes the routes into the skill mass and, with the same weights, the uniform-attention reference mass; their log ratio is the graph evidence. The final score stays within ±b of the text similarity.
+
+![Routes and correction](figures/routes_and_correction.png)

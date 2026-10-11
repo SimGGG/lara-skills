@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- README: architecture figure, main results of the manuscript, shorter usage section.
+- New `docs/results.md` with the full result tables and figures; method illustrations added to `docs/models.md`.
+- Repository URL corrected to `SimGGG/lara-skills`.
+
 ## 0.1.0 (2026-10-11)
 
 First public release.
