@@ -1,0 +1,21 @@
+﻿occupation_code,occupation_name,group,subgroup
+1001,steel arc welding technician,Welding and joining,Arc welding
+1002,aluminum arc welding technician,Welding and joining,Arc welding
+1003,laser welding technician,Welding and joining,Beam welding
+1004,electron beam welding technician,Welding and joining,Beam welding
+1005,friction stir welding technician,Welding and joining,Solid-state joining
+1006,brazing and soldering technician,Welding and joining,Solid-state joining
+1007,sand casting technician,Casting and forming,Casting
+1008,die casting technician,Casting and forming,Casting
+1009,hot forging technician,Casting and forming,Forging
+1010,cold forging technician,Casting and forming,Forging
+1011,stamping technician,Casting and forming,Sheet forming
+1012,deep drawing technician,Casting and forming,Sheet forming
+1013,electroplating technician,Surface and heat treatment,Plating
+1014,electroless plating technician,Surface and heat treatment,Plating
+1015,thermal spray coating technician,Surface and heat treatment,Coating
+1016,powder coating technician,Surface and heat treatment,Coating
+1017,quenching and tempering technician,Surface and heat treatment,Heat treatment
+1018,case hardening technician,Surface and heat treatment,Heat treatment
+1019,PLC programming technician,Digital manufacturing,Process control
+1020,sensor data acquisition technician,Digital manufacturing,Process control

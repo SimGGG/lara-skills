@@ -1,0 +1,29 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install CPU torch and the package
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[dev]"
+      - name: Unit tests
+        run: pytest -q
+      - name: Toy quickstart on CPU
+        run: lara-skills quickstart --workspace ci_workspace --device cpu
+      - name: Committed toy inputs match the generator
+        run: python -c "import json, lara_skills.toy as t; m = json.load(open('examples/toy/toy_manifest.json')); g = t.generate(m['seed']); assert all(t.content_sha256(g[k]) == v['content_sha256'] for k, v in m['tables'].items()); print('toy inputs verified')"

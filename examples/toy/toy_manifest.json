@@ -1,0 +1,127 @@
+{
+  "seed": 20261011,
+  "generator": "lara_skills.toy",
+  "synthetic": true,
+  "tables": {
+    "inputs/skills.csv": {
+      "rows": 240,
+      "columns": [
+        "skill_code",
+        "skill_name",
+        "main_group",
+        "sub_group",
+        "detail_group"
+      ],
+      "content_sha256": "f10f2a29b6a0b3e66a058f51f9ae03ab8f05fcb0ebfb141db8c3ec1a6f8e3df8"
+    },
+    "inputs/occupations.csv": {
+      "rows": 20,
+      "columns": [
+        "occupation_code",
+        "occupation_name",
+        "group",
+        "subgroup"
+      ],
+      "content_sha256": "81f92844169d8b46866ebe39cc6de99a35adaafb5be72a88c6e58a42bb74e129"
+    },
+    "inputs/postings/postings_2021.parquet": {
+      "rows": 6106,
+      "columns": [
+        "source",
+        "posting_id",
+        "year",
+        "month",
+        "occupation",
+        "skills"
+      ],
+      "content_sha256": "faed408e34613c7a5e405c00548ad80f911a96c7e640773606023bcdad9c61f0"
+    },
+    "inputs/postings/postings_2022.parquet": {
+      "rows": 6089,
+      "columns": [
+        "source",
+        "posting_id",
+        "year",
+        "month",
+        "occupation",
+        "skills"
+      ],
+      "content_sha256": "ea605af3f45077b8151d68e48b8f51d88d05581f0eecc56d5ca06aa36f26e2c9"
+    },
+    "inputs/postings/postings_2023.parquet": {
+      "rows": 6087,
+      "columns": [
+        "source",
+        "posting_id",
+        "year",
+        "month",
+        "occupation",
+        "skills"
+      ],
+      "content_sha256": "b2cdc1521a08214179eb5cc25a3be99cf8e3d446931f4a65349b083721f0a093"
+    },
+    "inputs/postings/postings_2024.parquet": {
+      "rows": 6150,
+      "columns": [
+        "source",
+        "posting_id",
+        "year",
+        "month",
+        "occupation",
+        "skills"
+      ],
+      "content_sha256": "949b5c55b39f479e078eb47172b9e52ceb69698cc7361fdeb0d5c2cd1c4f9d3f"
+    },
+    "inputs/patents/patents.parquet": {
+      "rows": 60,
+      "columns": [
+        "sample_id",
+        "application_id",
+        "application_year",
+        "technology_description",
+        "family_id"
+      ],
+      "content_sha256": "e8cb5038f5e06d8df5a38d72e7e44b2d288bfd9fbaaae381e27edc34df924bb6"
+    },
+    "inputs/patents/labels.parquet": {
+      "rows": 512,
+      "columns": [
+        "sample_id",
+        "perspective",
+        "skill_code",
+        "skill_name",
+        "relevance_score",
+        "eligible_numeric_label",
+        "decision_method",
+        "label_status"
+      ],
+      "content_sha256": "2782be59d823a4107fdc5d1374a5c3680887d672b31c9e2c76bfc6d4d9f32326"
+    },
+    "inputs/patents/candidate_pool.parquet": {
+      "rows": 518,
+      "columns": [
+        "sample_id",
+        "perspective",
+        "skill_code",
+        "skill_name",
+        "relevance_score",
+        "eligible_numeric_label",
+        "decision_method",
+        "label_status"
+      ],
+      "content_sha256": "9ee0d07e48213e162725ebd647095ab0f91df5ba6fc7b7e0e29b60284a81bcfe"
+    },
+    "inputs/patents/task_status.parquet": {
+      "rows": 60,
+      "columns": [
+        "sample_id",
+        "perspective",
+        "task_status",
+        "judged_candidates",
+        "withheld_candidates"
+      ],
+      "content_sha256": "326e390696dbb24ef1dbcdc5f0d06faf6bcfbd415419f383d7b4cea04f20fbef"
+    }
+  },
+  "app_config": "lara_app.json"
+}

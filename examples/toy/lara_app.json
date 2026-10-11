@@ -1,0 +1,137 @@
+{
+  "version": "toy_v1",
+  "market_id": "TOY",
+  "seed": 20261011,
+  "encoder": {
+    "backend": "hashed_ngram",
+    "model_id": "lara-skills/hashed-ngram",
+    "revision": "7ae362bd67cd6c811dcd0b6fbc7f0e0d5abe6326",
+    "dimension": 1024,
+    "max_seq_length": 4096,
+    "batch_size": 64,
+    "device": "cpu",
+    "cpu_threads": 4
+  },
+  "skills": {
+    "path": "inputs/skills.csv",
+    "id_column": "skill_code",
+    "name_column": "skill_name",
+    "taxonomy_columns": [
+      "main_group",
+      "sub_group",
+      "detail_group"
+    ],
+    "text_template": "Skill: {skill_name}\nCategory: {taxonomy_path}",
+    "taxonomy_separator": " > "
+  },
+  "postings": {
+    "files": [
+      "inputs/postings/postings_2021.parquet",
+      "inputs/postings/postings_2022.parquet",
+      "inputs/postings/postings_2023.parquet",
+      "inputs/postings/postings_2024.parquet"
+    ],
+    "columns": {
+      "source": "source",
+      "posting_id": "posting_id",
+      "year": "year",
+      "month": "month",
+      "skills": "skills",
+      "occupation": "occupation"
+    },
+    "skill_separator": ",",
+    "occupation_code_width": 4,
+    "start_year": 2021,
+    "end_year": 2024,
+    "threads": 2,
+    "memory_limit": "1GB",
+    "batch_size": 50000
+  },
+  "graph": {
+    "thresholds": {
+      "min_skill_postings": 1,
+      "min_cooccurrence": 5,
+      "weight_metric": "cosine",
+      "min_weight": 0.05,
+      "min_active_years": 1
+    },
+    "grid": {
+      "min_skill_postings": [
+        1,
+        5
+      ],
+      "min_cooccurrence": [
+        1,
+        5,
+        10,
+        20
+      ],
+      "min_weight": [
+        0.0,
+        0.05,
+        0.1,
+        0.2
+      ]
+    }
+  },
+  "occupations": {
+    "path": "inputs/occupations.csv",
+    "code_column": "occupation_code",
+    "name_column": "occupation_name",
+    "path_columns": [
+      "group",
+      "subgroup"
+    ],
+    "code_width": 4,
+    "embedding_template": "Occupation: {name}\nCategory: {path}",
+    "min_occupation_skill_postings": 5,
+    "threshold_grid": [
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "patents": {
+    "dir": "inputs/patents",
+    "files": {
+      "patents": "patents.parquet",
+      "labels": "labels.parquet",
+      "candidate_pool": "candidate_pool.parquet",
+      "task_status": "task_status.parquet"
+    },
+    "columns": {
+      "application": "application_id",
+      "year": "application_year",
+      "text": "technology_description",
+      "family": "family_id"
+    },
+    "split_fractions": {
+      "train": 0.6,
+      "validation": 0.2,
+      "test": 0.2
+    },
+    "split_seed": 42
+  },
+  "model": {
+    "variant": "lara",
+    "device": "cpu",
+    "cpu_threads": 4,
+    "hidden_dim": 64,
+    "decoder_dim": 32,
+    "attention_heads": 2,
+    "query_neighbors": 10,
+    "epochs": 30,
+    "score_chunk_size": 8192
+  },
+  "evaluation": {
+    "ks": [
+      5,
+      10,
+      20,
+      50,
+      100
+    ]
+  }
+}

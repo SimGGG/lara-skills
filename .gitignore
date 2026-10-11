@@ -1,0 +1,27 @@
+# Python / packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.env
+*.tmp
+~$*
+
+# Workspaces created by the quickstart or by users; the toy inputs under examples/toy are kept.
+lara_toy_workspace/
+ci_workspace/
+workspace*/
+**/artifacts/
+**/data/processed/
+*.partial_*/
+
+# Model and embedding caches
+.cache/
+huggingface/

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the software and the accompanying manuscript."
+type: software
+title: "lara-skills: labor-market-aware relational attention for technology-to-skill recommendation"
+version: 0.1.0
+date-released: "2026-10-11"
+license: MIT
+repository-code: "https://github.com/SimGGG/lara-skills"
+authors:
+  - family-names: Sim
+    given-names: Jihwan
+    email: sim2080@dongyang.ac.kr
+    affiliation: "Department of Big Data Management, Dongyang Mirae University, Seoul, Republic of Korea"
+preferred-citation:
+  type: article
+  title: "LARA: Labor-market-aware relational attention for technology-to-skill recommendation"
+  authors:
+    - family-names: Sim
+      given-names: Jihwan
+      affiliation: "Department of Big Data Management, Dongyang Mirae University, Seoul, Republic of Korea"
+  year: 2026
+  notes: "Manuscript under review; update this entry with the journal, volume and DOI once published."

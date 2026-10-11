@@ -1,0 +1,241 @@
+﻿skill_code,skill_name,main_group,sub_group,detail_group
+TS-111-01,steel arc welding process setup,Welding and joining,Arc welding,Steel arc welding
+TS-111-02,steel arc welding parameter tuning,Welding and joining,Arc welding,Steel arc welding
+TS-111-03,steel arc welding fixture design,Welding and joining,Arc welding,Steel arc welding
+TS-111-04,steel arc welding defect inspection,Welding and joining,Arc welding,Steel arc welding
+TS-111-05,steel arc welding equipment maintenance,Welding and joining,Arc welding,Steel arc welding
+TS-111-06,steel arc welding safety procedures,Welding and joining,Arc welding,Steel arc welding
+TS-111-07,steel arc welding material selection,Welding and joining,Arc welding,Steel arc welding
+TS-111-08,steel arc welding automation programming,Welding and joining,Arc welding,Steel arc welding
+TS-111-09,steel arc welding quality documentation,Welding and joining,Arc welding,Steel arc welding
+TS-111-10,steel arc welding cost estimation,Welding and joining,Arc welding,Steel arc welding
+TS-112-01,aluminum arc welding process setup,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-02,aluminum arc welding parameter tuning,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-03,aluminum arc welding fixture design,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-04,aluminum arc welding defect inspection,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-05,aluminum arc welding equipment maintenance,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-06,aluminum arc welding safety procedures,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-07,aluminum arc welding material selection,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-08,aluminum arc welding automation programming,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-09,aluminum arc welding quality documentation,Welding and joining,Arc welding,Aluminum arc welding
+TS-112-10,aluminum arc welding cost estimation,Welding and joining,Arc welding,Aluminum arc welding
+TS-121-01,laser welding process setup,Welding and joining,Beam welding,Laser welding
+TS-121-02,laser welding parameter tuning,Welding and joining,Beam welding,Laser welding
+TS-121-03,laser welding fixture design,Welding and joining,Beam welding,Laser welding
+TS-121-04,laser welding defect inspection,Welding and joining,Beam welding,Laser welding
+TS-121-05,laser welding equipment maintenance,Welding and joining,Beam welding,Laser welding
+TS-121-06,laser welding safety procedures,Welding and joining,Beam welding,Laser welding
+TS-121-07,laser welding material selection,Welding and joining,Beam welding,Laser welding
+TS-121-08,laser welding automation programming,Welding and joining,Beam welding,Laser welding
+TS-121-09,laser welding quality documentation,Welding and joining,Beam welding,Laser welding
+TS-121-10,laser welding cost estimation,Welding and joining,Beam welding,Laser welding
+TS-122-01,electron beam welding process setup,Welding and joining,Beam welding,Electron beam welding
+TS-122-02,electron beam welding parameter tuning,Welding and joining,Beam welding,Electron beam welding
+TS-122-03,electron beam welding fixture design,Welding and joining,Beam welding,Electron beam welding
+TS-122-04,electron beam welding defect inspection,Welding and joining,Beam welding,Electron beam welding
+TS-122-05,electron beam welding equipment maintenance,Welding and joining,Beam welding,Electron beam welding
+TS-122-06,electron beam welding safety procedures,Welding and joining,Beam welding,Electron beam welding
+TS-122-07,electron beam welding material selection,Welding and joining,Beam welding,Electron beam welding
+TS-122-08,electron beam welding automation programming,Welding and joining,Beam welding,Electron beam welding
+TS-122-09,electron beam welding quality documentation,Welding and joining,Beam welding,Electron beam welding
+TS-122-10,electron beam welding cost estimation,Welding and joining,Beam welding,Electron beam welding
+TS-131-01,friction stir welding process setup,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-02,friction stir welding parameter tuning,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-03,friction stir welding fixture design,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-04,friction stir welding defect inspection,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-05,friction stir welding equipment maintenance,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-06,friction stir welding safety procedures,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-07,friction stir welding material selection,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-08,friction stir welding automation programming,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-09,friction stir welding quality documentation,Welding and joining,Solid-state joining,Friction stir welding
+TS-131-10,friction stir welding cost estimation,Welding and joining,Solid-state joining,Friction stir welding
+TS-132-01,brazing and soldering process setup,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-02,brazing and soldering parameter tuning,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-03,brazing and soldering fixture design,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-04,brazing and soldering defect inspection,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-05,brazing and soldering equipment maintenance,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-06,brazing and soldering safety procedures,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-07,brazing and soldering material selection,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-08,brazing and soldering automation programming,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-09,brazing and soldering quality documentation,Welding and joining,Solid-state joining,Brazing and soldering
+TS-132-10,brazing and soldering cost estimation,Welding and joining,Solid-state joining,Brazing and soldering
+TS-211-01,sand casting process setup,Casting and forming,Casting,Sand casting
+TS-211-02,sand casting parameter tuning,Casting and forming,Casting,Sand casting
+TS-211-03,sand casting fixture design,Casting and forming,Casting,Sand casting
+TS-211-04,sand casting defect inspection,Casting and forming,Casting,Sand casting
+TS-211-05,sand casting equipment maintenance,Casting and forming,Casting,Sand casting
+TS-211-06,sand casting safety procedures,Casting and forming,Casting,Sand casting
+TS-211-07,sand casting material selection,Casting and forming,Casting,Sand casting
+TS-211-08,sand casting automation programming,Casting and forming,Casting,Sand casting
+TS-211-09,sand casting quality documentation,Casting and forming,Casting,Sand casting
+TS-211-10,sand casting cost estimation,Casting and forming,Casting,Sand casting
+TS-212-01,die casting process setup,Casting and forming,Casting,Die casting
+TS-212-02,die casting parameter tuning,Casting and forming,Casting,Die casting
+TS-212-03,die casting fixture design,Casting and forming,Casting,Die casting
+TS-212-04,die casting defect inspection,Casting and forming,Casting,Die casting
+TS-212-05,die casting equipment maintenance,Casting and forming,Casting,Die casting
+TS-212-06,die casting safety procedures,Casting and forming,Casting,Die casting
+TS-212-07,die casting material selection,Casting and forming,Casting,Die casting
+TS-212-08,die casting automation programming,Casting and forming,Casting,Die casting
+TS-212-09,die casting quality documentation,Casting and forming,Casting,Die casting
+TS-212-10,die casting cost estimation,Casting and forming,Casting,Die casting
+TS-221-01,hot forging process setup,Casting and forming,Forging,Hot forging
+TS-221-02,hot forging parameter tuning,Casting and forming,Forging,Hot forging
+TS-221-03,hot forging fixture design,Casting and forming,Forging,Hot forging
+TS-221-04,hot forging defect inspection,Casting and forming,Forging,Hot forging
+TS-221-05,hot forging equipment maintenance,Casting and forming,Forging,Hot forging
+TS-221-06,hot forging safety procedures,Casting and forming,Forging,Hot forging
+TS-221-07,hot forging material selection,Casting and forming,Forging,Hot forging
+TS-221-08,hot forging automation programming,Casting and forming,Forging,Hot forging
+TS-221-09,hot forging quality documentation,Casting and forming,Forging,Hot forging
+TS-221-10,hot forging cost estimation,Casting and forming,Forging,Hot forging
+TS-222-01,cold forging process setup,Casting and forming,Forging,Cold forging
+TS-222-02,cold forging parameter tuning,Casting and forming,Forging,Cold forging
+TS-222-03,cold forging fixture design,Casting and forming,Forging,Cold forging
+TS-222-04,cold forging defect inspection,Casting and forming,Forging,Cold forging
+TS-222-05,cold forging equipment maintenance,Casting and forming,Forging,Cold forging
+TS-222-06,cold forging safety procedures,Casting and forming,Forging,Cold forging
+TS-222-07,cold forging material selection,Casting and forming,Forging,Cold forging
+TS-222-08,cold forging automation programming,Casting and forming,Forging,Cold forging
+TS-222-09,cold forging quality documentation,Casting and forming,Forging,Cold forging
+TS-222-10,cold forging cost estimation,Casting and forming,Forging,Cold forging
+TS-231-01,stamping process setup,Casting and forming,Sheet forming,Stamping
+TS-231-02,stamping parameter tuning,Casting and forming,Sheet forming,Stamping
+TS-231-03,stamping fixture design,Casting and forming,Sheet forming,Stamping
+TS-231-04,stamping defect inspection,Casting and forming,Sheet forming,Stamping
+TS-231-05,stamping equipment maintenance,Casting and forming,Sheet forming,Stamping
+TS-231-06,stamping safety procedures,Casting and forming,Sheet forming,Stamping
+TS-231-07,stamping material selection,Casting and forming,Sheet forming,Stamping
+TS-231-08,stamping automation programming,Casting and forming,Sheet forming,Stamping
+TS-231-09,stamping quality documentation,Casting and forming,Sheet forming,Stamping
+TS-231-10,stamping cost estimation,Casting and forming,Sheet forming,Stamping
+TS-232-01,deep drawing process setup,Casting and forming,Sheet forming,Deep drawing
+TS-232-02,deep drawing parameter tuning,Casting and forming,Sheet forming,Deep drawing
+TS-232-03,deep drawing fixture design,Casting and forming,Sheet forming,Deep drawing
+TS-232-04,deep drawing defect inspection,Casting and forming,Sheet forming,Deep drawing
+TS-232-05,deep drawing equipment maintenance,Casting and forming,Sheet forming,Deep drawing
+TS-232-06,deep drawing safety procedures,Casting and forming,Sheet forming,Deep drawing
+TS-232-07,deep drawing material selection,Casting and forming,Sheet forming,Deep drawing
+TS-232-08,deep drawing automation programming,Casting and forming,Sheet forming,Deep drawing
+TS-232-09,deep drawing quality documentation,Casting and forming,Sheet forming,Deep drawing
+TS-232-10,deep drawing cost estimation,Casting and forming,Sheet forming,Deep drawing
+TS-311-01,electroplating process setup,Surface and heat treatment,Plating,Electroplating
+TS-311-02,electroplating parameter tuning,Surface and heat treatment,Plating,Electroplating
+TS-311-03,electroplating fixture design,Surface and heat treatment,Plating,Electroplating
+TS-311-04,electroplating defect inspection,Surface and heat treatment,Plating,Electroplating
+TS-311-05,electroplating equipment maintenance,Surface and heat treatment,Plating,Electroplating
+TS-311-06,electroplating safety procedures,Surface and heat treatment,Plating,Electroplating
+TS-311-07,electroplating material selection,Surface and heat treatment,Plating,Electroplating
+TS-311-08,electroplating automation programming,Surface and heat treatment,Plating,Electroplating
+TS-311-09,electroplating quality documentation,Surface and heat treatment,Plating,Electroplating
+TS-311-10,electroplating cost estimation,Surface and heat treatment,Plating,Electroplating
+TS-312-01,electroless plating process setup,Surface and heat treatment,Plating,Electroless plating
+TS-312-02,electroless plating parameter tuning,Surface and heat treatment,Plating,Electroless plating
+TS-312-03,electroless plating fixture design,Surface and heat treatment,Plating,Electroless plating
+TS-312-04,electroless plating defect inspection,Surface and heat treatment,Plating,Electroless plating
+TS-312-05,electroless plating equipment maintenance,Surface and heat treatment,Plating,Electroless plating
+TS-312-06,electroless plating safety procedures,Surface and heat treatment,Plating,Electroless plating
+TS-312-07,electroless plating material selection,Surface and heat treatment,Plating,Electroless plating
+TS-312-08,electroless plating automation programming,Surface and heat treatment,Plating,Electroless plating
+TS-312-09,electroless plating quality documentation,Surface and heat treatment,Plating,Electroless plating
+TS-312-10,electroless plating cost estimation,Surface and heat treatment,Plating,Electroless plating
+TS-321-01,thermal spray coating process setup,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-02,thermal spray coating parameter tuning,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-03,thermal spray coating fixture design,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-04,thermal spray coating defect inspection,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-05,thermal spray coating equipment maintenance,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-06,thermal spray coating safety procedures,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-07,thermal spray coating material selection,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-08,thermal spray coating automation programming,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-09,thermal spray coating quality documentation,Surface and heat treatment,Coating,Thermal spray coating
+TS-321-10,thermal spray coating cost estimation,Surface and heat treatment,Coating,Thermal spray coating
+TS-322-01,powder coating process setup,Surface and heat treatment,Coating,Powder coating
+TS-322-02,powder coating parameter tuning,Surface and heat treatment,Coating,Powder coating
+TS-322-03,powder coating fixture design,Surface and heat treatment,Coating,Powder coating
+TS-322-04,powder coating defect inspection,Surface and heat treatment,Coating,Powder coating
+TS-322-05,powder coating equipment maintenance,Surface and heat treatment,Coating,Powder coating
+TS-322-06,powder coating safety procedures,Surface and heat treatment,Coating,Powder coating
+TS-322-07,powder coating material selection,Surface and heat treatment,Coating,Powder coating
+TS-322-08,powder coating automation programming,Surface and heat treatment,Coating,Powder coating
+TS-322-09,powder coating quality documentation,Surface and heat treatment,Coating,Powder coating
+TS-322-10,powder coating cost estimation,Surface and heat treatment,Coating,Powder coating
+TS-331-01,quenching and tempering process setup,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-02,quenching and tempering parameter tuning,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-03,quenching and tempering fixture design,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-04,quenching and tempering defect inspection,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-05,quenching and tempering equipment maintenance,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-06,quenching and tempering safety procedures,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-07,quenching and tempering material selection,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-08,quenching and tempering automation programming,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-09,quenching and tempering quality documentation,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-331-10,quenching and tempering cost estimation,Surface and heat treatment,Heat treatment,Quenching and tempering
+TS-332-01,case hardening process setup,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-02,case hardening parameter tuning,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-03,case hardening fixture design,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-04,case hardening defect inspection,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-05,case hardening equipment maintenance,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-06,case hardening safety procedures,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-07,case hardening material selection,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-08,case hardening automation programming,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-09,case hardening quality documentation,Surface and heat treatment,Heat treatment,Case hardening
+TS-332-10,case hardening cost estimation,Surface and heat treatment,Heat treatment,Case hardening
+TS-411-01,PLC programming process setup,Digital manufacturing,Process control,PLC programming
+TS-411-02,PLC programming parameter tuning,Digital manufacturing,Process control,PLC programming
+TS-411-03,PLC programming fixture design,Digital manufacturing,Process control,PLC programming
+TS-411-04,PLC programming defect inspection,Digital manufacturing,Process control,PLC programming
+TS-411-05,PLC programming equipment maintenance,Digital manufacturing,Process control,PLC programming
+TS-411-06,PLC programming safety procedures,Digital manufacturing,Process control,PLC programming
+TS-411-07,PLC programming material selection,Digital manufacturing,Process control,PLC programming
+TS-411-08,PLC programming automation programming,Digital manufacturing,Process control,PLC programming
+TS-411-09,PLC programming quality documentation,Digital manufacturing,Process control,PLC programming
+TS-411-10,PLC programming cost estimation,Digital manufacturing,Process control,PLC programming
+TS-412-01,sensor data acquisition process setup,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-02,sensor data acquisition parameter tuning,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-03,sensor data acquisition fixture design,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-04,sensor data acquisition defect inspection,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-05,sensor data acquisition equipment maintenance,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-06,sensor data acquisition safety procedures,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-07,sensor data acquisition material selection,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-08,sensor data acquisition automation programming,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-09,sensor data acquisition quality documentation,Digital manufacturing,Process control,Sensor data acquisition
+TS-412-10,sensor data acquisition cost estimation,Digital manufacturing,Process control,Sensor data acquisition
+TS-421-01,vision inspection process setup,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-02,vision inspection parameter tuning,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-03,vision inspection fixture design,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-04,vision inspection defect inspection,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-05,vision inspection equipment maintenance,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-06,vision inspection safety procedures,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-07,vision inspection material selection,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-08,vision inspection automation programming,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-09,vision inspection quality documentation,Digital manufacturing,Quality inspection,Vision inspection
+TS-421-10,vision inspection cost estimation,Digital manufacturing,Quality inspection,Vision inspection
+TS-422-01,nondestructive testing process setup,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-02,nondestructive testing parameter tuning,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-03,nondestructive testing fixture design,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-04,nondestructive testing defect inspection,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-05,nondestructive testing equipment maintenance,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-06,nondestructive testing safety procedures,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-07,nondestructive testing material selection,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-08,nondestructive testing automation programming,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-09,nondestructive testing quality documentation,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-422-10,nondestructive testing cost estimation,Digital manufacturing,Quality inspection,Nondestructive testing
+TS-431-01,process data analysis process setup,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-02,process data analysis parameter tuning,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-03,process data analysis fixture design,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-04,process data analysis defect inspection,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-05,process data analysis equipment maintenance,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-06,process data analysis safety procedures,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-07,process data analysis material selection,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-08,process data analysis automation programming,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-09,process data analysis quality documentation,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-431-10,process data analysis cost estimation,Digital manufacturing,Manufacturing analytics,Process data analysis
+TS-432-01,predictive maintenance process setup,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-02,predictive maintenance parameter tuning,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-03,predictive maintenance fixture design,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-04,predictive maintenance defect inspection,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-05,predictive maintenance equipment maintenance,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-06,predictive maintenance safety procedures,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-07,predictive maintenance material selection,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-08,predictive maintenance automation programming,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-09,predictive maintenance quality documentation,Digital manufacturing,Manufacturing analytics,Predictive maintenance
+TS-432-10,predictive maintenance cost estimation,Digital manufacturing,Manufacturing analytics,Predictive maintenance
