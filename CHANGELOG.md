@@ -5,6 +5,7 @@
 - README: architecture figure, main results of the manuscript, shorter usage section.
 - New `docs/results.md` with the full result tables and figures; method illustrations added to `docs/models.md`.
 - Repository URL corrected to `SimGGG/lara-skills`.
+- 2026-10-13: documentation aligned with the revised manuscript. Figures replaced by the revised exports (architecture figure with the decoder inputs, group vector from member skills, residual-norm bound in the attention figure, unified result figures with the "Middle" similarity bin); result pages add the decomposition of known positives by skill attribute, the training-size curves and the precision of the judged top-five lists; "seeds" renamed "training runs" in the result descriptions; data description updated (dictionary name, patent search, judgment procedure, second judgment round). No code change.
 
 ## 0.1.0 (2026-10-11)
 

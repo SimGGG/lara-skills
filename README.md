@@ -11,15 +11,15 @@ This repository packages the architecture and the data pipeline so that the meth
 1. **Labor-market graph and node features.** Job postings and the skill dictionary define a heterogeneous graph of skills (co-occurrence edges), occupations (occupation-skill demand edges) and taxonomy groups (membership and aggregated co-occurrence). Every node carries a frozen text embedding (BGE-M3 by default); a static typed graph attention encoder (HGT-style, with a log edge-weight prior) produces node states.
 2. **Patent-conditioned node attention.** The description embedding passes through a content-preserving adapter and attends, per node type, to actual skill, occupation and taxonomy nodes.
 3. **Relation routes and fusion.** Attention mass reaches skills through three routes: a skill route over co-occurrence, an occupation route whose occupation-to-skill weights depend on the description, and a taxonomy route. A gate conditioned on the original embedding mixes the routes; the same gate applied to a uniform-attention reference gives a baseline mass, and the log ratio is the graph evidence for each skill.
-4. **Skill score.** A decoder over query and skill states plus the graph evidence forms a residual that is bounded by `0.1 * tanh(.)` around the text cosine, so the model starts at the semantic baseline and can only correct it within a corridor. Training minimizes a KL loss against soft targets built from the text similarity distribution with known positives mixed in and explicit negatives removed. The top-K skills are selected from the full dictionary.
+4. **Skill score.** A decoder over the projected query, the skill state, the text similarity and the skill's posting frequency, together with the graph evidence, forms a residual that is bounded by `0.1 * tanh(.)` around the text cosine, so the model starts at the semantic baseline and can only correct it within a corridor. Training minimizes a KL loss against soft targets built from the text similarity distribution with known positives mixed in and explicit negatives removed. The top-K skills are selected from the full dictionary.
 
 The `lara-na` variant keeps the node attention but routes evidence with fixed market weights and equal mass per node type. Component-level details and hyperparameters: [docs/models.md](docs/models.md).
 
 ## Results
 
-Numbers come from the manuscript *LARA: Labor-market-aware relational attention for technology-to-skill recommendation* (under review). Data: 7,934,099 Korean job postings (2021-2024), a dictionary of 6,558 skills with a 29/118/464 taxonomy, 450 occupations, and 200 human-labeled patents filed 2019-2023 split 120 / 40 / 40 into train / validation / test. Metrics are computed over the full 6,558-skill list per patent; recall counts known relevant skills only, and unjudged recommendations are never treated as errors. Learned models report the mean over three training seeds.
+Numbers come from the manuscript *LARA: Labor-market-aware relational attention for technology-to-skill recommendation* (under review). Data: 7,934,099 Korean job postings (2021-2024), a dictionary of 6,558 skills with a 29/118/464 taxonomy, 450 occupations, and 200 human-labeled patents filed 2019-2023 split 120 / 40 / 40 into train / validation / test. Metrics are computed over the full 6,558-skill list per patent; recall counts known relevant skills only, and unjudged recommendations are never treated as errors. Learned models report the mean over three training runs with different random initializations.
 
-**Held-out test retrieval (40 patents, 367 known relevant pairs, %).** Recall@5 is mean ± sample SD across seeds.
+**Held-out test retrieval (40 patents, 367 known relevant pairs, %).** Recall@5 is mean ± sample SD across runs.
 
 | Model | Recall@5 | Hit@5 | Recall@20 | Recall@100 |
 | --- | ---: | ---: | ---: | ---: |
@@ -34,13 +34,13 @@ Numbers come from the manuscript *LARA: Labor-market-aware relational attention 
 | LARA-NA (`lara-na`) | 18.60 ± 1.10 | 84.17 | 41.11 | 68.26 |
 | **LARA (`lara`)** | **20.86 ± 0.90** | **87.50** | **44.26** | **72.82** |
 
-Within-seed increments of LARA over Text MLP, HGT and LARA-NA are 4.92 ± 1.26, 3.93 ± 0.19 and 2.26 ± 0.45 percentage points.
+Paired increments of LARA over Text MLP, HGT and LARA-NA (computed within each run) are 4.92 ± 1.26, 3.93 ± 0.19 and 2.26 ± 0.45 percentage points. These are differences between complete architectures and do not isolate a single relation.
 
 ![RQ1 results](docs/figures/results_rq1.png)
 
-**Skills that semantic similarity misses.** Among the 334 known relevant pairs outside the BGE top five, LARA recovers 15.94 ± 0.83 % at K = 5, compared with 11.74 ± 0.34 % for Text MLP, 11.53 ± 1.05 % for HGT and 13.57 ± 1.12 % for LARA-NA. Relative to Text MLP, LARA retrieves 24.00 additional positive pairs on average while losing 8.67. Across similarity bins defined on training data, LARA and Text MLP are close in the low bin (10.81 vs 10.91 %), while LARA leads in the medium bin (22.23 vs 19.92 %); BGE keeps the highest macro recall in the high bin (37.91 vs 34.37 %).
+**Skills that semantic similarity misses.** Among the 334 known relevant pairs outside the BGE top five, LARA recovers 15.94 ± 0.83 % at K = 5, compared with 11.74 ± 0.34 % for Text MLP, 11.53 ± 1.05 % for HGT and 13.57 ± 1.12 % for LARA-NA. Relative to Text MLP, LARA retrieves 24.00 additional positive pairs on average while losing 8.67. Across similarity bins defined on training data, LARA and Text MLP are close in the low bin (10.81 vs 10.91 %), while LARA leads in the middle bin (22.23 vs 19.92 %); BGE keeps the highest macro recall in the high bin (37.91 vs 34.37 %). Decomposed by attributes of the relevant skill, the gain over Text MLP is largest for directly relevant, moderately frequent and well-connected skills and for engineering and manufacturing skill groups; it is absent in the highest posting-frequency tercile and small for information-technology skills ([docs/results.md](docs/results.md)).
 
-**Structural ablations (test Recall@5, LARA minus control, percentage points, within matching seeds).**
+**Structural ablations (test Recall@5, LARA minus control, percentage points, paired within runs).**
 
 | Control | Recall@5 | Increment |
 | --- | ---: | ---: |
@@ -51,7 +51,9 @@ Within-seed increments of LARA over Text MLP, HGT and LARA-NA are 4.92 ± 1.26, 
 | degree-preserving rewiring | 21.65 ± 0.71 | −0.79 ± 0.20 |
 | fixed occupation routing | 20.43 ± 0.59 | +0.43 ± 1.44 |
 
-Removing posting relations or fixing occupation routing lowers recall, but a rewired graph performs slightly better than the observed one, so the results support the complete architecture without establishing that the exact observed edge arrangement is necessary. On the validation set, LARA's advantage over Text MLP holds at every training size from 30 to 120 patents (+3.0 to +4.3 points). Full tables and the remaining figures: [docs/results.md](docs/results.md).
+Removing posting relations or fixing occupation routing lowers recall, but a rewired graph performs slightly better than the observed one, so the results support the complete architecture without establishing that the exact observed edge arrangement is necessary. On the validation set, LARA's mean advantage over Text MLP remains positive at every training size from 30 to 120 patents (+3.0 to +4.3 points) but does not increase consistently as fewer labels are used.
+
+**Precision of the complete top-five lists.** Known-positive recall says nothing about unjudged recommendations, so the experts judged every previously unjudged top-five recommendation of LARA, Text MLP, HGT and BGE similarity for the 40 test patents (one training run per learned model). Precision@5 is 77.0 % for LARA, 70.0 % for Text MLP, 65.5 % for HGT and 32.0 % for BGE similarity; the paired differences over Text MLP (+7.0 points, 95 % patent-bootstrap interval +1.0 to +13.0) and HGT (+11.5, +5.5 to +18.0) exclude zero, and 62.9 % of LARA's previously unjudged recommendations were judged relevant. Known-positive recall therefore describes recovery of the reference set, not the relevance of the list. Full tables and the remaining figures: [docs/results.md](docs/results.md).
 
 ## Install
 

@@ -16,7 +16,7 @@ The internal identifiers are kept because configurations and checkpoints record 
 | Labor-market graph and node features | frozen text features for skills, occupations, taxonomy groups; typed graph attention (HGT-style, static, with a log edge-weight prior) | `encoders`, `attention_ranker.TypedAttentionLayer`, `attention_ranker.AttentionRanker` |
 | Patent-conditioned node attention | per-type softmax attention of the query over actual nodes | `network_attention_ranker.NetworkAttentionRanker.node_attention`, `conditional_routing_ranker.ConditionalRoutingRanker.content_attention` |
 | Relation routes | co-occurrence route (direct plus propagated), occupation route with query-conditioned edge probabilities, taxonomy route, gate over the three families, uniform-attention reference mass | `ConditionalRoutingRanker.encode_queries` and helpers |
-| Skill score | decoder over query and skill states plus log-ratio of routed mass to its reference, bounded by `residual_bound * tanh(.)` around the text cosine | `ConditionalRoutingRanker.score_pairs`, `ranking.SkillRanker.combine_scores` |
+| Skill score | decoder over the projected query, the skill state, the text cosine and the skill's posting frequency, plus the log-ratio of routed mass to its reference, bounded by `residual_bound * tanh(.)` around the text cosine | `ConditionalRoutingRanker.score_pairs`, `ranking.SkillRanker.combine_scores` |
 | Training objective for partial labels | soft targets from the frozen cosine distribution, positives mixed in with `positive_target_mass`, explicit zeros removed, KL retrieval loss plus auxiliary pairwise loss and residual penalty | `retrieval_objective` |
 | Inference | all-candidate scoring in chunks; descriptions encoded in memory | `recommender.RecommendationEngine` |
 
@@ -58,7 +58,7 @@ The three figures below walk through the stages on a toy graph (names, weights a
 
 ![Graph and node features](figures/graph_and_features.png)
 
-**Patent-conditioned node attention.** The description embedding passes through the content-preserving adapter (bounded change, identity at initialization) and a projection. For each node type, a text term compares the adapted query with the node text vectors and a bounded graph term compares projected states; one softmax per node type gives the attention.
+**Patent-conditioned node attention.** The description embedding passes through the content-preserving adapter (a residual whose norm is bounded by `content_query_bound` before renormalization; identity at initialization) and a projection. For each node type, a text term compares the adapted query with the node text vectors (divided by `semantic_attention_temperature`) and a graph term scaled by `learned_attention_bound` compares projected states; one softmax per node type gives the attention.
 
 ![Node attention](figures/node_attention.png)
 
